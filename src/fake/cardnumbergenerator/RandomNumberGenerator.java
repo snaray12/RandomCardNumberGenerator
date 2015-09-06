@@ -6,9 +6,8 @@ import java.util.Random;
 public class RandomNumberGenerator {
 
 	public static Integer getRandomNumberFromList(List<Integer> list){
-		Random random = new Random();
-		int index = random.nextInt(list.size());
-		return list.get(index);
+		RandomGenerator<Integer> rg = new RandomGenerator<Integer>();
+		return rg.getRandomValueFromList(list);
 	}
 	public static Integer getRandomNumber(Integer min, Integer max){
 		return (int) (Math.floor(Math.random() * (max - min + 1)) + min);
@@ -24,7 +23,6 @@ public class RandomNumberGenerator {
 		return min;
 	}
 	private static boolean isDigitSizeEqual(Long n, Integer digits) {
-//		int length = (int)(Math.log10(n)+1);
 		int length = numberOfElements(n);
 		boolean isEqual = false;
 		if (digits == length){
@@ -45,5 +43,9 @@ public class RandomNumberGenerator {
 	}
 	public static int getDigitCount(int n) {
 		return (int)(Math.log10(n)+1);
+	}
+	public static String getRandomValueFromList(List<String> cardTypes) {
+		RandomGenerator<String> rg = new RandomGenerator<String>();
+		return rg.getRandomValueFromList(cardTypes);
 	}
 }

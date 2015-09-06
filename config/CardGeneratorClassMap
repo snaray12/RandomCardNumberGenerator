@@ -1,0 +1,3 @@
+AMEX=fake.cardnumbergenerator.AmexCard
+VISA=fake.cardnumbergenerator.VisaCard
+MASTER=fake.cardnumbergenerator.MasterCard

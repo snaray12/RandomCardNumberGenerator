@@ -13,7 +13,7 @@ public class CardFactory {
 		Card card = null;
 		Properties props = new Properties();
 		try {
-			props.load(new FileInputStream(new File("CardGeneratorClassMap")));
+			props.load(new FileInputStream(new File("config/CardGeneratorClassMap")));
 			String cls = props.getProperty(type);
 			Class c = Class.forName(cls);
 			card = (Card)c.newInstance();
